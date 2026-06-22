@@ -1,0 +1,25 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+
+[[mods]]
+modId="randombimedimensions"
+version="${file.jarVersion}"
+displayName="Random Biome Dimensions"
+description='''
+Creates dimensions with random biomes from biome mods.
+'''
+
+[[dependencies.randombimedimensions]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.randombimedimensions]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"

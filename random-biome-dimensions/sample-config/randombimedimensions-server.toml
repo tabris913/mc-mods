@@ -1,0 +1,167 @@
+#Random Biome Dimensions Server Config
+#This file is auto-generated on first server start at: world/serverconfig/randombimedimensions-server.toml
+
+[dimensions]
+    #World border size (one side length in blocks)
+    #Range: 100 ~ 100000
+    worldSize = 1000
+    #Portal frame blocks for each dimension. List length = number of dimensions.
+    portalBlocks = ["minecraft:crying_obsidian", "minecraft:prismarine", "minecraft:purpur_block", "minecraft:end_stone_bricks"]
+
+[difficulty]
+    #Distance in blocks between difficulty increases
+    #Range: 10 ~ 10000
+    difficultyInterval = 500
+    #Health multiplier per difficulty step
+    #Range: 1.0 ~ 10.0
+    healthMultiplier = 1.5
+    #Attack multiplier per difficulty step
+    #Range: 1.0 ~ 10.0
+    attackMultiplier = 1.2
+    #Defense multiplier per difficulty step
+    #Range: 1.0 ~ 10.0
+    defenseMultiplier = 1.1
+
+[loot]
+    #Custom loot table resource location applied to all mobs in RBD dimensions
+    lootTable = "randombimedimensions:rbd_mob_drops"
+
+[biomes]
+    #List of biome resource locations available for dimension generation
+    #Only biomes that are actually loaded (from installed mods) will be used.
+    biomePool = [
+        # Biomes O' Plenty (wildcard)
+        "biomesoplenty:*",
+        # Oh The Biomes We've Gone
+        "biomeswevegone:allium_fields",
+        "biomeswevegone:amaranth_grasslands",
+        "biomeswevegone:araucaria_savanna",
+        "biomeswevegone:aspen_boreal",
+        "biomeswevegone:atacama_desert",
+        "biomeswevegone:autumnal_valley",
+        "biomeswevegone:baobab_savanna",
+        "biomeswevegone:bayou",
+        "biomeswevegone:black_forest",
+        "biomeswevegone:canadian_shield",
+        "biomeswevegone:cika_woods",
+        "biomeswevegone:coniferous_forest",
+        "biomeswevegone:coconino_meadow",
+        "biomeswevegone:crag_gardens",
+        "biomeswevegone:crimson_gardens",
+        "biomeswevegone:cypress_swamplands",
+        "biomeswevegone:dacite_ridges",
+        "biomeswevegone:dead_sea",
+        "biomeswevegone:ebony_woods",
+        "biomeswevegone:enchanted_tangle",
+        "biomeswevegone:eroded_borealis",
+        "biomeswevegone:forgotten_forest",
+        "biomeswevegone:frosted_taiga",
+        "biomeswevegone:howling_peaks",
+        "biomeswevegone:jacaranda_jungle",
+        "biomeswevegone:lush_stacks",
+        "biomeswevegone:maple_taiga",
+        "biomeswevegone:mojave_desert",
+        "biomeswevegone:orchard",
+        "biomeswevegone:overgrowth_woodlands",
+        "biomeswevegone:prairie",
+        "biomeswevegone:pumpkin_valley",
+        "biomeswevegone:rainbow_beach",
+        "biomeswevegone:redwood_thicket",
+        "biomeswevegone:rose_fields",
+        "biomeswevegone:sakura_grove",
+        "biomeswevegone:shattered_glacier",
+        "biomeswevegone:skyris_vale",
+        "biomeswevegone:tropical_rainforest",
+        "biomeswevegone:twilight_meadow",
+        "biomeswevegone:weeping_witch_forest",
+        "biomeswevegone:white_mangrove_wetlands",
+        "biomeswevegone:zelkova_forest",
+        # Regions Unexplored
+        "regions_unexplored:autumnal_maple_forest",
+        "regions_unexplored:bamboo_forest",
+        "regions_unexplored:baobab_savanna",
+        "regions_unexplored:blackwood_forest",
+        "regions_unexplored:chalk_cliffs",
+        "regions_unexplored:cold_deciduous_forest",
+        "regions_unexplored:colorful_beach",
+        "regions_unexplored:deciduous_forest",
+        "regions_unexplored:eucalyptus_forest",
+        "regions_unexplored:flower_fields",
+        "regions_unexplored:frozen_tundra",
+        "regions_unexplored:grassland",
+        "regions_unexplored:highland_fields",
+        "regions_unexplored:hyacinth_delight",
+        "regions_unexplored:japanese_maple_forest",
+        "regions_unexplored:lavender_fields",
+        "regions_unexplored:lush_hills",
+        "regions_unexplored:magrove_delta",
+        "regions_unexplored:maple_forest",
+        "regions_unexplored:meadow",
+        "regions_unexplored:mushroom_forest",
+        "regions_unexplored:old_growth_rainforest",
+        "regions_unexplored:orchard",
+        "regions_unexplored:palm_forest",
+        "regions_unexplored:pine_forest",
+        "regions_unexplored:poplar_forest",
+        "regions_unexplored:prairie",
+        "regions_unexplored:pumpkin_fields",
+        "regions_unexplored:rainforest",
+        "regions_unexplored:redwood_forest",
+        "regions_unexplored:scorched_plains",
+        "regions_unexplored:silver_birch_forest",
+        "regions_unexplored:sparse_redwoods",
+        "regions_unexplored:spires",
+        "regions_unexplored:temperate_grove",
+        "regions_unexplored:tropical_forest",
+        "regions_unexplored:tropics",
+        "regions_unexplored:willow_forest",
+        # Terralith
+        "terralith:amethyst_canyon",
+        "terralith:amethyst_rainforest",
+        "terralith:arid_highlands",
+        "terralith:birch_taiga",
+        "terralith:blooming_plateau",
+        "terralith:blooming_valley",
+        "terralith:brushland",
+        "terralith:caldera",
+        "terralith:cloud_forest",
+        "terralith:desert_canyon",
+        "terralith:desert_oasis",
+        "terralith:forested_highlands",
+        "terralith:fractured_savanna",
+        "terralith:granite_cliffs",
+        "terralith:gravel_desert",
+        "terralith:haze_mountain",
+        "terralith:highland_clearing",
+        "terralith:lavender_forest",
+        "terralith:lavender_valley",
+        "terralith:lush_valley",
+        "terralith:mirage_isles",
+        "terralith:moonlight_grove",
+        "terralith:moonlight_valley",
+        "terralith:orchid_swamp",
+        "terralith:red_oasis",
+        "terralith:rocky_mountains",
+        "terralith:sakura_grove",
+        "terralith:sakura_valley",
+        "terralith:sandstone_valley",
+        "terralith:savanna_badlands",
+        "terralith:shield",
+        "terralith:shield_clearing",
+        "terralith:skylands_autumn",
+        "terralith:skylands_spring",
+        "terralith:skylands_summer",
+        "terralith:skylands_winter",
+        "terralith:snowy_shield",
+        "terralith:steppe",
+        "terralith:temperate_highlands",
+        "terralith:valley_clearing",
+        "terralith:volcanic_crater",
+        "terralith:volcanic_peaks",
+        "terralith:warm_river",
+        "terralith:wisteria_forest",
+        "terralith:wisteria_valley",
+        "terralith:yellowstone",
+        "terralith:yosemite_cliffs",
+        "terralith:yosemite_lowlands"
+    ]

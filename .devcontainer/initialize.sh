@@ -13,9 +13,9 @@ echo "# ------------------------------------------------------------------------
 docker run --rm simonwhitaker/gibo dump Java >> .gitignore
 
 echo "# -----------------------------------------------------------------------------" >> .gitignore
-echo "# maven" >> .gitignore
+echo "# gradle" >> .gitignore
 echo "# -----------------------------------------------------------------------------" >> .gitignore
-docker run --rm simonwhitaker/gibo dump Maven >> .gitignore
+docker run --rm simonwhitaker/gibo dump Gradle >> .gitignore
 
 echo "# -----------------------------------------------------------------------------" >> .gitignore
 echo "# node" >> .gitignore

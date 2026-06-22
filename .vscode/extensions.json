@@ -1,0 +1,28 @@
+{
+  "recommendations": [
+    "AkankshaSingh872.case-change", // Case Change
+    "mhutchie.git-graph", // Git Graph
+    "donjayamanne.githistory", // Git History
+    "eamodio.gitlens", // GitLens
+    "ryu1kn.partial-diff", // Partial Diff
+    "esbenp.prettier-vscode", // Prettier
+    "chrmarti.regex", // Regax Previewer
+    "Gruntfuggly.todo-tree", // Todo Tree
+    // file utilities
+    "yzhang.markdown-all-in-one", // Markdown All in One
+    "yzane.markdown-pdf", // Markdown PDF
+    "shd101wyy.markdown-preview-enhanced", // Markdown Preview Enhanced
+    "alanwalk.markdown-toc", // Markdown TOC
+    "richie5um2.vscode-sort-json", // Sort JSON objects
+    "3w36zj6.textlint", // textlint
+    "dotjoshjohnson.xml", // XML Tools
+    // java
+    "redhat.vscode-community-server-connector", // Community Server Connectors
+    "vscjava.vscode-java-pack", // Extension Pack for Java
+    "madhavd1.javadoc-tools", // Javadoc Tools
+    "redhat.java", // Language Support for Java
+    "gabrielbb.vscode-lombok", // Lombok Annotations Support
+    "vscjava.vscode-maven", // Maven for Java
+    "josevseb.google-java-format-for-vs-code"
+  ]
+}

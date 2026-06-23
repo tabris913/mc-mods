@@ -2,6 +2,7 @@ package com.tosshie.rbd;
 
 import com.tosshie.rbd.command.GenerateCommand;
 import com.tosshie.rbd.config.RBDConfig;
+import com.tosshie.rbd.event.AttackLogHandler;
 import com.tosshie.rbd.event.LootTableHandler;
 import com.tosshie.rbd.event.MobSpawnHandler;
 import com.tosshie.rbd.event.MobStrengthHandler;
@@ -38,6 +39,7 @@ public class RandomBiomeDimensions {
         MinecraftForge.EVENT_BUS.register(new PortalTeleportHandler());
         MinecraftForge.EVENT_BUS.register(new WorldBorderHandler());
         MinecraftForge.EVENT_BUS.register(new SpawnDimensionHandler());
+        MinecraftForge.EVENT_BUS.register(new AttackLogHandler());
     }
 
     @SubscribeEvent

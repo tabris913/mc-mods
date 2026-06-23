@@ -22,4 +22,12 @@ public class DimensionHelper {
         return dimension.location().getNamespace().equals(RandomBiomeDimensions.MOD_ID)
                 && dimension.location().getPath().startsWith("rbd_dim_");
     }
+
+    /**
+     * スポーンディメンションかどうかを判定する。
+     */
+    public static boolean isSpawnDimension(ResourceKey<Level> dimension) {
+        return dimension.location().getNamespace().equals(RandomBiomeDimensions.MOD_ID)
+                && dimension.location().getPath().equals("rbd_spawn");
+    }
 }

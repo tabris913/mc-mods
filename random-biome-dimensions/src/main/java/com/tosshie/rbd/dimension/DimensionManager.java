@@ -172,9 +172,6 @@ public class DimensionManager {
                     null
             );
 
-            // ワールドボーダーリスナー登録
-            overworld.getWorldBorder().addListener(new net.minecraft.world.level.border.BorderChangeListener.DelegateBorderChangeListener(newLevel.getWorldBorder()));
-
             // サーバーに登録
             map.put(levelKey, newLevel);
             server.markWorldsDirty();
@@ -262,9 +259,6 @@ public class DimensionManager {
                     BiomeManager.obfuscateSeed(seed), ImmutableList.of(), false, null
             );
 
-            ServerLevel overworld = server.overworld();
-            overworld.getWorldBorder().addListener(
-                    new net.minecraft.world.level.border.BorderChangeListener.DelegateBorderChangeListener(newLevel.getWorldBorder()));
             map.put(levelKey, newLevel);
             server.markWorldsDirty();
             MinecraftForge.EVENT_BUS.post(new LevelEvent.Load(newLevel));
@@ -285,6 +279,8 @@ public class DimensionManager {
         WorldBorder border = level.getWorldBorder();
         border.setCenter(0, 0);
         border.setSize(size);
+        RandomBiomeDimensions.LOGGER.info("[WorldBorder] {} にボーダー設定: size={}, actual={}",
+                level.dimension().location(), size, border.getSize());
     }
 
     /**

@@ -13,6 +13,7 @@ public class RBDConfig {
     public static final ForgeConfigSpec.DoubleValue HEALTH_MULTIPLIER;
     public static final ForgeConfigSpec.DoubleValue ATTACK_MULTIPLIER;
     public static final ForgeConfigSpec.DoubleValue DEFENSE_MULTIPLIER;
+    public static final ForgeConfigSpec.DoubleValue XP_MULTIPLIER;
     public static final ForgeConfigSpec.ConfigValue<List<? extends String>> PORTAL_BLOCKS;
     public static final ForgeConfigSpec.ConfigValue<List<? extends String>> BIOME_POOL;
 
@@ -37,7 +38,7 @@ public class RBDConfig {
         builder.push("difficulty");
         DIFFICULTY_INTERVAL = builder
                 .comment("Distance in blocks between difficulty increases")
-                .defineInRange("difficultyInterval", 500, 10, 10000);
+                .defineInRange("difficultyInterval", 100, 10, 10000);
         HEALTH_MULTIPLIER = builder
                 .comment("Health multiplier per difficulty step")
                 .defineInRange("healthMultiplier", 1.5, 1.0, 10.0);
@@ -47,6 +48,9 @@ public class RBDConfig {
         DEFENSE_MULTIPLIER = builder
                 .comment("Defense multiplier per difficulty step")
                 .defineInRange("defenseMultiplier", 1.1, 1.0, 10.0);
+        XP_MULTIPLIER = builder
+                .comment("XP multiplier per difficulty step")
+                .defineInRange("xpMultiplier", 1.2, 1.0, 10.0);
         builder.pop();
 
 

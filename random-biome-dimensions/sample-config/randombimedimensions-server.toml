@@ -27,9 +27,12 @@
     lootTable = "randombimedimensions:rbd_mob_drops"
 
 [biomes]
-    #List of biome resource locations available for dimension generation
+    #List of biome resource locations available for dimension generation.
+    #Use 'namespace:*' wildcard to include all biomes from a mod.
     #Only biomes that are actually loaded (from installed mods) will be used.
     biomePool = [
+        # Vanilla (63 biomes in 1.20.1)
+        "minecraft:*",
         # Biomes O' Plenty (wildcard)
         "biomesoplenty:*",
         # Oh The Biomes We've Gone
@@ -164,4 +167,16 @@
         "terralith:yellowstone",
         "terralith:yosemite_cliffs",
         "terralith:yosemite_lowlands"
+    ]
+
+[advancements]
+    #MOD advancement settings. Format: 'modNamespace:advancementTitle'.
+    #When a player discovers all biomes from a mod namespace in the biome pool, the advancement is granted.
+    #The advancement title is displayed in chat.
+    advancementMods = [
+        "minecraft:真・冒険の時間",
+        "biomesoplenty:ホワット・ア・ワンダフル・バイオーム",
+        "biomeswevegone:ウィー・アー・ザ・バイオーマーズ",
+        "regions_unexplored:バイオーミアン・ラプソディ",
+        "terralith:ルール・ザ・テラ"
     ]

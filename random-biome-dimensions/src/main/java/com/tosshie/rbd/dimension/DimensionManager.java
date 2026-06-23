@@ -39,6 +39,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.Executor;
 import java.util.stream.Collectors;
 
@@ -346,6 +347,7 @@ public class DimensionManager {
      * ワイルドカード（"namespace:*"）に対応。
      */
     private static List<String> resolveBiomePool(List<String> patterns, Registry<Biome> biomeRegistry) {
+        Set<String> excludes = new java.util.HashSet<>(RBDConfig.BIOME_EXCLUDE.get());
         List<String> resolved = new ArrayList<>();
         for (String pattern : patterns) {
             if (pattern.endsWith(":*")) {
@@ -353,9 +355,10 @@ public class DimensionManager {
                 biomeRegistry.keySet().stream()
                         .filter(loc -> loc.getNamespace().equals(namespace))
                         .map(ResourceLocation::toString)
+                        .filter(id -> !excludes.contains(id))
                         .forEach(resolved::add);
             } else {
-                if (biomeRegistry.containsKey(new ResourceLocation(pattern))) {
+                if (!excludes.contains(pattern) && biomeRegistry.containsKey(new ResourceLocation(pattern))) {
                     resolved.add(pattern);
                 }
             }

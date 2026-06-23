@@ -16,6 +16,8 @@ public class RBDConfig {
     public static final ForgeConfigSpec.DoubleValue XP_MULTIPLIER;
     public static final ForgeConfigSpec.ConfigValue<List<? extends String>> PORTAL_BLOCKS;
     public static final ForgeConfigSpec.ConfigValue<List<? extends String>> BIOME_POOL;
+    public static final ForgeConfigSpec.ConfigValue<List<? extends String>> BIOME_EXCLUDE;
+    public static final ForgeConfigSpec.ConfigValue<List<? extends String>> ADVANCEMENT_MODS;
 
 
     static {
@@ -57,8 +59,11 @@ public class RBDConfig {
 
         builder.push("biomes");
         BIOME_POOL = builder
-                .comment("List of biome resource locations available for dimension generation")
+                .comment("List of biome resource locations available for dimension generation.",
+                        "Use 'namespace:*' wildcard to include all biomes from a mod.")
                 .defineList("biomePool", Arrays.asList(
+                        // Vanilla (63 biomes in 1.20.1)
+                        "minecraft:*",
                         // Biomes O' Plenty
                         "biomesoplenty:bayou",
                         "biomesoplenty:cherry_blossom_grove",
@@ -229,6 +234,30 @@ public class RBDConfig {
                         "terralith:yellowstone",
                         "terralith:yosemite_cliffs",
                         "terralith:yosemite_lowlands"
+                ), o -> o instanceof String);
+        BIOME_EXCLUDE = builder
+                .comment("Biomes to exclude from dimension generation and advancement tracking")
+                .defineList("biomeExclude", Arrays.asList(
+                        "minecraft:the_void",
+                        "minecraft:the_end",
+                        "minecraft:end_highlands",
+                        "minecraft:end_midlands",
+                        "minecraft:small_end_islands",
+                        "minecraft:end_barrens"
+                ), o -> o instanceof String);
+        builder.pop();
+
+        builder.push("advancements");
+        ADVANCEMENT_MODS = builder
+                .comment("MOD advancement settings. Format: 'modNamespace:advancementTitle'.",
+                        "When a player discovers all biomes from a mod namespace, the advancement is granted.",
+                        "The advancement title is displayed in chat.")
+                .defineList("advancementMods", Arrays.asList(
+                        "minecraft:真・冒険の時間",
+                        "biomesoplenty:ホワット・ア・ワンダフル・バイオーム",
+                        "biomeswevegone:ウィー・アー・ザ・バイオーマーズ",
+                        "regions_unexplored:バイオーミアン・ラプソディ",
+                        "terralith:ルール・ザ・テラ"
                 ), o -> o instanceof String);
         builder.pop();
 
